@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="esdip.pickapps"
+    android:sharedUserId="pickapps.user">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <provider
+            android:name=".PickAppsContentProvider"
+            android:authorities="pickapps.contentprovider"
+            android:exported="true" />
+
+        <receiver android:name=".MainService$WeatherDataReceiver"/>
+
+        <receiver android:name=".MainService$WeatherWallpaperReceiver"/>
+
+        <receiver android:name=".MainService$DayWeekWallpaperReceiver"/>
+
+        <receiver android:name=".MainService$HourDayWallpaperReceiver"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+
+                <!-- singleInstance  <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" /> -->
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+            <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="@string/google_maps_key" />
+        </activity>
+
+        <service
+            android:name=".WeatherService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".LocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ClockService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".PackageManager"
+            android:label="@string/title_activity_widgets_manager"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="esdip.pickapps.PACKAGE_MANAGER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <data android:mimeType="text/plain" /> -->
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="esdip.pickapps.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".WeatherIntentService"
+            android:exported="false" />
+        <service
+            android:name=".LocationIntentService"
+            android:exported="false" />
+        <service
+            android:name=".MainService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EditorActivity"
+            android:label="@string/title_activity_editor"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="esdip.pickapps.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EditorSelectActivity"
+            android:label="@string/title_activity_editor_select"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="esdip.pickapps.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EditorWidgetsImageSelectorActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".LaunchPlacePickerActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".NewWallpaperConfigActivity" />
+        <activity
+            android:name=".BehaviorConfigActivity"
+            android:launchMode="singleTask" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="esdip.pickapps.EditorActivity" />
+        </activity>
+        <activity android:name=".CustomWallpapersActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="esdip.pickapps.EditorSelectActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".HourBehaviorFragment"
+android:background="@color/colorPrimaryDark"
+app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="15dp">
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_gravity="top"
+        android:id="@+id/grid">
+
+<!-- MOURNING -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/morning_group"
+            android:text="@string/mourning"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:textSize="18dp"
+            android:layout_marginBottom="15dp"
+            android:tag="@string/mourning"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mourning_image"
+            android:tag="@string/mourning"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_7_text"
+            android:text="7"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_7_image"
+            android:tag="7"
+            android:layout_gravity="right"
+            android:src="@drawable/no_image_icon"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_8_text"
+            android:text="8"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_8_image"
+            android:tag="8"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_9_text"
+            android:text="9"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_9_image"
+            android:tag="9"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_10_text"
+            android:text="10"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_10_image"
+            android:tag="10"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_11_text"
+            android:text="11"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_11_image"
+            android:tag="11"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_12_text"
+            android:text="12"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_12_image"
+            android:tag="12"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+<!-- END MOURNING -->
+
+
+
+<!-- AFTERNOON -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/afternoon_group"
+            android:tag="@string/afternoon"
+            android:text="@string/afternoon"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_gravity="left" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/afternoon_image"
+            android:tag="@string/afternoon"
+            android:layout_gravity="right"
+            android:src="@drawable/no_image_icon"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_13_text"
+            android:text="13"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_13_image"
+            android:tag="13"
+            android:layout_gravity="right"
+            android:src="@drawable/no_image_icon"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_14_text"
+            android:text="14"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_14_image"
+            android:tag="14"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_15_text"
+            android:text="15"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_15_image"
+            android:tag="15"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_16_text"
+            android:text="16"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_16_image"
+            android:tag="16"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_17_text"
+            android:text="17"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_17_image"
+            android:tag="17"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_18_text"
+            android:text="18"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_18_image"
+            android:tag="18"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+<!-- END AFTERNOON -->
+
+
+
+<!-- EVENING -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/evening_group"
+            android:text="@string/evening"
+            android:tag="@string/evening"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_gravity="left"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/evening_image"
+            android:tag="@string/evening"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_19_text"
+            android:text="19"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_19_image"
+            android:tag="19"
+            android:layout_gravity="right"
+            android:src="@drawable/no_image_icon"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_20_text"
+            android:text="20"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_20_image"
+            android:tag="20"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_21_text"
+            android:text="21"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_21_image"
+            android:tag="21"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_22_text"
+            android:text="22"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_22_image"
+            android:tag="22"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_23_text"
+            android:text="23"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_23_image"
+            android:tag="23"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_24_text"
+            android:text="24"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_24_image"
+            android:tag="24"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+<!-- END EVENING -->
+
+
+
+<!-- NIGHT -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/night_group"
+            android:tag="@string/night"
+            android:text="@string/night"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_gravity="left"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/night_image"
+            android:tag="@string/night"
+            android:layout_gravity="right"
+            android:src="@drawable/no_image_icon"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_1_text"
+            android:text="1"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_1_image"
+            android:tag="1"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_2_text"
+            android:text="2"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_2_image"
+            android:tag="2"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_3_text"
+            android:text="3"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_3_image"
+            android:tag="3"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_4_text"
+            android:text="4"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_4_image"
+            android:tag="4"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_5_text"
+            android:text="5"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_5_image"
+            android:tag="5"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_6_text"
+            android:text="6"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_6_image"
+            android:tag="6"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/no_image_icon"
+            android:visibility="gone" />
+<!-- END NIGHT -->
+
+
+    </GridLayout>
+
+
+</ScrollView>
+
+
+</FrameLayout>
+
+
+

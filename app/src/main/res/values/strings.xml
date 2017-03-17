@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- App constants -->
+    <string name="active_package">active_package</string>
+    <string name="active_behavior">active_behavior</string>
+    <string name="official_wallpaper">official</string>
+    <string name="custom_wallpaper">custom</string>
+
+</resources>
